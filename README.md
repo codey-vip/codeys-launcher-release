@@ -6,7 +6,7 @@
 
 **Ring of Elysium · 玩家社区服务器启动器**
 
-[官方网站](https://codeys.vip) · [下载最新版](../../releases/latest) · [加入 TG 群](https://t.me/codeys_vip) · [项目研究日志](https://github.com/codey-vip/roe-offline-research-progress)
+[官方网站](https://codeys.vip) · [下载最新版](../../releases/latest) · [加入 TG 群](https://t.me/codeys_vip)
 
 免费 · 中英双语 · 自带运行环境，解压即用
 
