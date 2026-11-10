@@ -27,7 +27,16 @@ CODEYS 是一个由玩家发起、玩家运营的**无限法则（Ring of Elysiu
 | `CodeysLauncher-x.y.z-win-x64.zip` | 启动器主包，解压后运行 `CodeysLauncher.exe` |
 | `CodeysLauncher-x.y.z-win-x64.zip.sha256` | 安装包校验值（SHA-256） |
 
-当前正式版：**v1.1.6**（2026-11-09 发布）。
+当前正式版：**v1.1.7**（2026-11-10 发布）。
+
+### 1.1.7 更新
+
+- 每次启动记录同目录日志，出现错误时自动上传脱敏诊断信息，断网后可重试。
+- 修复 DX11 / DX12 的地图选择，支持海岛、雪地和随机。
+- 网络检测持续 10 秒，检测到丢包时提示启动游戏加速器后重测。
+- 公告支持滚轮切换、点赞、点踩和文字评论，全文滚动条更简洁。
+- 统一使用“提交反馈”；本人反馈有新回复或状态更新时显示红点，点击打开对应网页。
+- 游戏连接与网络检测使用独立游戏域名 `game.codeys.vip`。
 
 ## 🚀 快速开始
 
@@ -63,11 +72,13 @@ CODEYS 是一个由玩家发起、玩家运营的**无限法则（Ring of Elysiu
 启动器不保存密码，登录凭证由 Windows 当前用户加密存储，最长 7 天有效；游戏服务器通过一次性票据核验身份，仅凭 UID 无法登录他人账号。目前暂不支持邮箱找回密码，请保管好密码。
 
 **连不上 / 进不去游戏？**
-用启动器内的「检测网络」；发现可修复的拦截时可一键放行服务器 IP。仍未解决时，把同一次启动生成的两份 `.log` 文件（路径见设置内「使用帮助」）带到 TG 群，维护者会跟进。
+用启动器内的「检测网络」；发现可修复的拦截时可一键放行服务器 IP，检测到丢包时按提示启动游戏加速器后重测。出现错误时启动器会自动上传脱敏诊断信息；你也可以使用「提交反馈」说明问题，并附上同一次启动生成的两份 `.log` 文件（路径见设置内「使用帮助」），方便维护者排查。
 
 ## 🌍 English
 
 CODEYS is a player-run community server for **Ring of Elysium**. Grab the launcher from [Releases](../../releases/latest), register at [codeys.vip](https://codeys.vip), and point the launcher at your own **ROE 2022 client (`0.2.989.0`)** — then jump back into the island and the snow with tactical AI, squads, vehicles and free cosmetics. The launcher is bilingual (Chinese/English), updates itself, and contains **no game files**. Full guide: [PLAYER-GUIDE.en-US.txt](PLAYER-GUIDE.en-US.txt).
+
+**Current stable: v1.1.7 (2026-11-10).** Includes local diagnostic logs and redacted error uploads, DX11/DX12 map selection fixes, 10-second network testing with a packet-loss hint, announcement reactions and comments, feedback notifications, and a dedicated game domain.
 
 ## ⚠️ 声明
 

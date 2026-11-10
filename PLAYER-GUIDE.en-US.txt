@@ -46,19 +46,34 @@ Website links opened by the launcher carry the selected language.
 
 The game uses its saved DirectX 11 or DirectX 12 preference. Without a saved
 preference, it uses the client's DX11 default. The launcher does not rewrite
-renderer settings. Native map selection remains available for the supported
-DX12 client.
+renderer settings. Native map selection is available for both supported
+DX11 and DX12 clients.
 
-The newest announcement shows its summary. Other cards show only their titles.
+The newest announcement shows its summary. Other cards keep their titles and
+reaction/comment controls visible while their body text is collapsed.
+Hover over an announcement card and scroll the mouse wheel up or down to switch
+previews quickly. Click the expanded card's text area to read its full text.
 Select a collapsed title to preview its summary in place. Select the expanded
 card again, or choose Read more, to open the full text. Switching previews
 collapses the previous summary and keeps the titles above and below in order.
 Hover or use the keyboard to focus a card for a subtle lift.
 Announcements refresh every 5 seconds. Authored announcement content keeps its
 original language.
+Each card has Like, Dislike and Comments actions in its lower-right corner.
+Sign in to react: each account has one choice per announcement. Click the selected
+reaction again to undo it, or select the other reaction to replace it. Choices
+and comments are saved on the server and restored after restarting the launcher.
+Comments support multiple lines and up to 1000 characters. Press Ctrl+Enter to
+post, or select Post comment. Comments display the author's game character name.
 
-Report a Bug opens the website. Sign in there to submit your report.
-Test network measures latency, jitter and packet loss for 15 seconds.
+Submit feedback opens the website. Sign in there to share an issue or suggestion.
+Its red dot indicates a new reply or status update on your own feedback. Click it
+to open that report. Sign in to the same account in your browser and view the
+message; the launcher updates the dot automatically. Announcement details use a
+subtle dark scrollbar, with dragging, track paging, scrolling and text selection.
+Test network measures latency, jitter and packet loss for 10 seconds.
+If packet loss is detected, the results prompt you to start your game
+accelerator and run the test again.
 The Online, Lobby and In game counts refresh every 5 seconds and exclude bots.
 
 Passwords are not saved. Your encrypted sign-in session lasts up to 7 days;
@@ -75,3 +90,6 @@ request. This allows only server 103.143.81.125 and preserves restrictions for o
 addresses. The launcher then tests the network again. Inspection does not change rules.
 Administrator-managed rules, blocks covering all programs and third-party firewalls
 may need manual changes in their own settings.
+
+The game gateway and network test use game.codeys.vip. Website and account sign-in use codeys.vip.
+Keep the game DNS record DNS-only; do not enable a regular CDN proxy for it.
