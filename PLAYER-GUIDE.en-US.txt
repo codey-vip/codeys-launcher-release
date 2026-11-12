@@ -1,10 +1,15 @@
 CODEYS Ring of Elysium Launcher
 
 Windows 10 / 11, 64-bit. Extract the package and run CodeysLauncher.exe.
-The runtime is included. Keep the launcher open while playing; closing it closes
-the game started by this launcher.
+The Full edition includes the runtime. The Lite edition needs .NET 10 Windows Desktop Runtime (x64).
+The current stable version is 1.1.8. Older versions must update before starting the game.
+Keep the launcher open while playing; closing it closes the game started by this launcher.
 
-Each launch writes two timestamped .log files beside CodeysLauncher.exe.
+The root contains CodeysLauncher.exe and the CodeysLauncher.Data folder.
+Its logs folder holds logs, and updates holds temporary update files and rollback backups.
+Packages omit the docs folder; guides and licenses are available in the public repository. Legacy launcher logs and documents
+are organized automatically; unrelated personal files are left in place.
+Each launch writes two timestamped .log files in CodeysLauncher.Data\logs.
 CodeysLauncher-date-time-milliseconds-PID.log contains startup stages, actions,
 errors with call stacks, and network diagnostic results. The matching
 .runtime.log captures runtime errors before the main app opens and may be empty
@@ -20,8 +25,10 @@ Offline reports are queued in %LOCALAPPDATA%\CodeysLauncher\diagnostic-uploads
 and retried on a later launch after backoff. The queue keeps up to 20 reports
 for 14 days. Uploading does not block the UI or shutdown.
 The main log is limited to 4 MiB.
-After the UI opens, idle logs older than 14 days or beyond the latest 30
-sessions are cleaned. Active session logs are preserved.
+On each launch, keep only the latest 10 launch sessions, ordered by launch time.
+Each main log, runtime log, and associated error/crash logs form one session
+and are removed together. This includes failures before the UI opens.
+Files still in use are removed on a later cleanup after they are released.
 
 1. Create your account at https://codeys.vip/.
 2. Sign in with your username or email and password.
@@ -36,6 +43,10 @@ remembered. Announcements and counts refresh less often while minimized or
 playing and update immediately when you return.
 Old runtime caches are cleaned automatically, keeping the current version,
 the previous version and any version still in use.
+Update prompts offer Default / Lite / Full, with Default selected each time.
+Default downloads the same edition as the running launcher. Lite needs the
+.NET 10 Desktop Runtime (x64); Full includes the runtime. Missing download or
+checksum details produce an error without silently switching editions.
 Updates show progress, speed and estimated time. Interrupted downloads retry
 and can resume after closing. Installation starts only after verification.
 
@@ -65,6 +76,8 @@ reaction again to undo it, or select the other reaction to replace it. Choices
 and comments are saved on the server and restored after restarting the launcher.
 Comments support multiple lines and up to 1000 characters. Press Ctrl+Enter to
 post, or select Post comment. Comments display the author's game character name.
+Administrator comments display a gold Administrator label. The server confirms
+this role independently of whether the account has a game character.
 
 Submit feedback opens the website. Sign in there to share an issue or suggestion.
 Its red dot indicates a new reply or status update on your own feedback. Click it
@@ -93,3 +106,32 @@ may need manual changes in their own settings.
 
 The game gateway and network test use game.codeys.vip. Website and account sign-in use codeys.vip.
 Keep the game DNS record DNS-only; do not enable a regular CDN proxy for it.
+
+Game launch settings (1.1.7 update)
+Open Settings to choose Auto (follow game settings), DirectX 11 or DirectX 12. A manual choice affects the next game started by this launcher and does not rewrite the game renderer configuration.
+Toggle Enable lobby map selection independently. When enabled, choose island, snow or random in the lobby; turn it off to use the original game interface. Both changes apply on the next game launch; exit any running game first.
+Defaults are automatic renderer selection with lobby map selection enabled. Version 1.1.8 includes these settings.
+
+Game security initialization failure (TP / ACE)
+For Warning (13, 131096, 60), open Settings → Check game security components on the affected computer. This checks five original components for the selected renderer, launch permissions and recent system blocking records.
+For missing files or differences from the recommended client, obtain and fully extract the complete client again. With standard permissions, exit the game and use Reopen as administrator to compare. Windows requests authorization; cancelling leaves the current launcher open.
+If files match but the error persists, use Open installed apps, find Anti-Cheat Expert and follow its official maintenance process. If no entry is available or the problem persists, copy the results and send them with the complete error screenshot to the administrator.
+Matching files or opening maintenance does not confirm recovery. Start the game again to verify the result.
+
+Security component compatibility mode (1.1.8)
+The toggle defaults off. It uses the supplied, signed ACE-BASE driver compatibility plan.
+The legacy stand-in DLL is no longer deployed; original client security initialization and checks remain active.
+Windows requests administrator approval. An elevated child owns this game, its connection and the driver transaction.
+Close Ring of Elysium and other ACE games first. Keep the launcher open while playing.
+The driver is checked against its full SHA256 and Windows signature before being cached in
+%ProgramData%\LocalROE-ACE-Compat. Each compatibility launch requests ACE-BASE to stop and queries its state,
+waiting up to 10 seconds. A stop failure or timeout aborts this launch with a message.
+Only after confirming Stopped is the existing demand-start ACE-BASE service path switched.
+Shared system drivers are not replaced. On game exit, startup failure or closing the launcher, the owned
+game and connection stop first; then the compatibility driver is stopped and the exact original path is restored.
+Recovery succeeds only after both the original path and stopped state are confirmed. If unloading fails,
+another program changes the configuration, or the recovery record cannot be verified, the record is retained.
+Restart Windows as prompted and try again. Do not manually delete lease.json. Unknown configuration is not overwritten.
+Legacy backups are still recovered after verification. A legacy stand-in without an original backup requires a complete client.
+The result is written to this launch's log and follows the latest-ten-launch retention rule.
+The protected machine directory holds only the latest result and any required recovery record.

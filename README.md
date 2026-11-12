@@ -8,7 +8,7 @@
 
 [官方网站](https://codeys.vip) · [下载最新版](../../releases/latest) · [加入 TG 群](https://t.me/codeys_vip)
 
-免费 · 中英双语 · 自带运行环境，解压即用
+免费 · 中英双语 · 精简版 / 完整版
 
 </div>
 
@@ -20,23 +20,24 @@ CODEYS 是一个由玩家发起、玩家运营的**无限法则（Ring of Elysiu
 
 ## 📦 下载
 
-打开 [Releases 最新版](../../releases/latest) 下载（约 40.9 MiB）：
+打开 [Releases 最新版](../../releases/latest) 或 [官网](https://codeys.vip/#launcher-download) 下载：
 
 | 文件 | 说明 |
 | --- | --- |
-| `CodeysLauncher-x.y.z-win-x64.zip` | 启动器主包，解压后运行 `CodeysLauncher.exe` |
-| `CodeysLauncher-x.y.z-win-x64.zip.sha256` | 安装包校验值（SHA-256） |
+| `CodeysLauncher-1.1.8-win-x64-lite.zip` | 精简版，需 .NET 10 桌面运行环境（x64） |
+| `CodeysLauncher-1.1.8-win-x64.zip` | 完整版，自带运行环境 |
+| `*.zip.sha256` | 对应安装包的 SHA-256 校验值 |
 
-当前正式版：**v1.1.7**（2026-11-10 发布）。
+当前正式版：**v1.1.8**（2026-11-12）。本次为**强制更新**，旧版须更新后才能继续启动游戏。解压后运行 `CodeysLauncher.exe`；两种压缩包均不含 docs 文件夹。
 
-### 1.1.7 更新
+### 1.1.8 更新
 
-- 每次启动记录同目录日志，出现错误时自动上传脱敏诊断信息，断网后可重试。
-- 修复 DX11 / DX12 的地图选择，支持海岛、雪地和随机。
-- 网络检测持续 10 秒，检测到丢包时提示启动游戏加速器后重测。
-- 公告支持滚轮切换、点赞、点踩和文字评论，全文滚动条更简洁。
-- 统一使用“提交反馈”；本人反馈有新回复或状态更新时显示红点，点击打开对应网页。
-- 游戏连接与网络检测使用独立游戏域名 `game.codeys.vip`。
+- 兼容模式使用签名 ACE-BASE 驱动；每次兼容启动先自动停止并确认服务已停止，游戏退出后恢复原路径。默认关闭，需要管理员授权；请先退出其他 ACE 游戏。
+- 新增 TP / ACE 安全组件检查，停止失败或超时会明确提示。
+- 更新弹窗可选“默认 / 精简版 / 完整版”，默认识别当前版本类型。
+- 附属文件统一放入 `CodeysLauncher.Data`，日志仅保留最近 10 次启动及对应错误、崩溃记录。
+- 管理员公告评论显示金色“管理员”，身份由服务器确认。
+- 保留渲染器选择、地图开关、CET 兼容、10 秒网络检测、公告互动及反馈提醒。
 
 ## 🚀 快速开始
 
@@ -72,13 +73,13 @@ CODEYS 是一个由玩家发起、玩家运营的**无限法则（Ring of Elysiu
 启动器不保存密码，登录凭证由 Windows 当前用户加密存储，最长 7 天有效；游戏服务器通过一次性票据核验身份，仅凭 UID 无法登录他人账号。目前暂不支持邮箱找回密码，请保管好密码。
 
 **连不上 / 进不去游戏？**
-用启动器内的「检测网络」；发现可修复的拦截时可一键放行服务器 IP，检测到丢包时按提示启动游戏加速器后重测。出现错误时启动器会自动上传脱敏诊断信息；你也可以使用「提交反馈」说明问题，并附上同一次启动生成的两份 `.log` 文件（路径见设置内「使用帮助」），方便维护者排查。
+用启动器内的「检测网络」；发现可修复的拦截时可一键放行服务器 IP，检测到丢包时按提示启动游戏加速器后重测。出现错误时启动器会自动上传脱敏诊断信息；你也可以使用「提交反馈」说明问题，并附上同一次启动生成的两份 `.log` 文件（位于 `CodeysLauncher.Data/logs`，设置内「使用帮助」可查看实际路径），方便维护者排查。
 
 ## 🌍 English
 
 CODEYS is a player-run community server for **Ring of Elysium**. Grab the launcher from [Releases](../../releases/latest), register at [codeys.vip](https://codeys.vip), and point the launcher at your own **ROE 2022 client (`0.2.989.0`)** — then jump back into the island and the snow with tactical AI, squads, vehicles and free cosmetics. The launcher is bilingual (Chinese/English), updates itself, and contains **no game files**. Full guide: [PLAYER-GUIDE.en-US.txt](PLAYER-GUIDE.en-US.txt).
 
-**Current stable: v1.1.7 (2026-11-10).** Includes local diagnostic logs and redacted error uploads, DX11/DX12 map selection fixes, 10-second network testing with a packet-loss hint, announcement reactions and comments, feedback notifications, and a dedicated game domain.
+**Current stable: v1.1.8 (2026-11-12). This update is required.** Choose Lite (.NET 10 Desktop Runtime x64 required) or Full (runtime included). Compatibility mode uses a signed ACE-BASE driver, automatically stops and checks the service before each compatible launch, and restores its path on exit. This mode defaults off and requires administrator approval. Updates offer Default/Lite/Full; logs and related crash records retain the latest ten launches. Includes security diagnostics and trusted administrator comment labels. Packages omit the docs folder.
 
 ## ⚠️ 声明
 
