@@ -2,7 +2,7 @@ CODEYS Ring of Elysium Launcher
 
 Windows 10 / 11, 64-bit. Extract the package and run CodeysLauncher.exe.
 The Full edition includes the runtime. The Lite edition needs .NET 10 Windows Desktop Runtime (x64).
-The current stable version is 1.1.8. Older versions must update before starting the game.
+The current version is 1.1.9. The minimum stays at 1.1.8. Updating is recommended for the new network recovery features.
 Keep the launcher open while playing; closing it closes the game started by this launcher.
 
 The root contains CodeysLauncher.exe and the CodeysLauncher.Data folder.
@@ -109,7 +109,7 @@ Keep the game DNS record DNS-only; do not enable a regular CDN proxy for it.
 
 Game launch settings (1.1.7 update)
 Open Settings to choose Auto (follow game settings), DirectX 11 or DirectX 12. A manual choice affects the next game started by this launcher and does not rewrite the game renderer configuration.
-Toggle Enable lobby map selection independently. When enabled, choose island, snow or random in the lobby; turn it off to use the original game interface. Both changes apply on the next game launch; exit any running game first.
+Toggle Enable lobby map selection independently. When enabled, choose island, snow or desert in the lobby; turn it off to use the original game interface. Both changes apply on the next game launch; exit any running game first.
 Defaults are automatic renderer selection with lobby map selection enabled. Version 1.1.8 includes these settings.
 
 Game security initialization failure (TP / ACE)
@@ -135,3 +135,8 @@ Restart Windows as prompted and try again. Do not manually delete lease.json. Un
 Legacy backups are still recovered after verification. A legacy stand-in without an original backup requires a complete client.
 The result is written to this launch's log and follows the latest-ten-launch retention rule.
 The protected machine directory holds only the latest result and any required recovery record.
+
+Local 1.1.9 preview: legacy ACE recovery records
+For a known r10 lease.json, the launcher verifies that ACE-BASE has stopped and its path matches the recorded original path. It then archives the exact old record and continues startup. Backups stay in the original ProgramData folder and start with lease.legacy-backup-. In-use services, differing paths or unrecognized records are kept and reported for further handling.
+
+The third choice selects the ordinary desert map, separately from desert training. Map labels follow the launcher language.
