@@ -1,0 +1,27 @@
+{
+  "version": "1.1.9",
+  "revision": "acepath-20261113",
+  "published": true,
+  "minimum": "1.1.8",
+  "required_update": false,
+  "downloads": [
+    {
+      "edition": "full",
+      "archive_bytes": 44442987,
+      "archive_sha256": "0b0e5faeba5ec64f8205f3e2d6b3f2736373103e2d4521117d6a0966eb0e7dd8"
+    },
+    {
+      "edition": "lite",
+      "archive_bytes": 2206762,
+      "archive_sha256": "c64e05c7e126764d92ce28a7a07de9cf3b5f7f932c24abf6dea2dde713654b1a"
+    }
+  ],
+  "verification": {
+    "regression_checks": 198,
+    "package_checks": 105,
+    "anonymous_public_checks": 17,
+    "anonymous_website_checks": 26
+  },
+  "game_startup_acceptance": "Pending user verification; no real game or driver was started by the publication checks.",
+  "same_version_update": "Existing 1.1.9 installations must redownload and replace the launcher."
+}
