@@ -1,37 +1,44 @@
 {
   "version": "1.2.0",
+  "revision": "map-cover-20261115",
   "published": true,
-  "announcement": "尝试修复黑屏/坠入地图等bug。",
+  "revised_at": "2026-11-15T04:08:46.672505+00:00",
   "release_url": "https://github.com/codey-vip/codeys-launcher-release/releases/tag/v1.2.0",
-  "published_at": "2026-11-15T03:34:16Z",
+  "announcement": "尝试修复黑屏/坠入地图等bug。\n\n修复训练模式选择地图后，上方封面未同步更新的问题。\n版本号保持 1.2.0；已安装 1.2.0 的用户请重新下载替换启动器。",
   "minimum_version": "1.1.8",
   "required_update": false,
+  "already_installed_1_2_0_requires_redownload": true,
   "update_notes_panel_available_from": "1.2.0",
-  "update_notes_ui_limitation": "The update announcement panel is available starting with 1.2.0. Older installed executables cannot display the new panel; the announcement is already available in the live update API and release notes.",
   "packages": [
     {
       "edition": "full",
       "filename": "CodeysLauncher-1.2.0-win-x64.zip",
-      "bytes": 44443952,
-      "sha256": "bdc67feabd9a0f69c460bfcea2cf914f15e25e703ce5a6edad8477b8f1cd512d",
-      "executable_sha256": "41e2c9a5c6024ee647fc885fd31332dfb201f31697d0b8a5603a5e03e43fc5c6",
+      "bytes": 44449214,
+      "sha256": "8f282b25cd09b4009289b5a59c271aff1d4539d98478aa9b98c1b921279a9674",
+      "executable_sha256": "50a42ae3e0311336b28d83951d6739ee33bfd911c57d261d620a4659735ed5c1",
       "docs_omitted": true
     },
     {
       "edition": "lite",
       "filename": "CodeysLauncher-1.2.0-win-x64-lite.zip",
-      "bytes": 2213682,
-      "sha256": "0fdf8d1dc9f2e6f30035ad143f0121a864357193cf8820ddaa050e73a381f203",
-      "executable_sha256": "463b93cab5c880c6c990750b1430b26fb717ef5f6b5d94aa5d0758135e5fc351",
+      "bytes": 2214317,
+      "sha256": "f7d6b95b415ef0675e95ec97593ee225c70c5bdfad61d8190a9ba3b949256305",
+      "executable_sha256": "48915f37631a7ea4d229a97b9bf2cfad5bfc5205cd8ed3d0acfb949bbb7bad76",
       "docs_omitted": true
     }
   ],
   "validation": {
-    "functional_checks": 502,
-    "artifact_checks": 120,
+    "functional_checks": 189,
+    "artifact_checks": 117,
+    "native_renderer_suites_passed": [
+      "DX11",
+      "DX12"
+    ],
+    "unchanged_product_negative_control_confirmed": true,
     "public_anonymous_download_checks": 17,
     "website_anonymous_download_checks": 27,
-    "full_download_sha256_zip_crc_and_range_resume": true,
+    "sha256_zip_crc_and_range_resume": true,
     "real_gameplay_acceptance": "pending"
-  }
+  },
+  "published_tag_preserved": true
 }
