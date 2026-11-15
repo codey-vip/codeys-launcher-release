@@ -28,7 +28,7 @@ CODEYS 是一个由玩家发起、玩家运营的**无限法则（Ring of Elysiu
 | `CodeysLauncher-1.2.0-win-x64.zip` | 完整版，自带运行环境 |
 | `*.zip.sha256` | 对应安装包的 SHA-256 校验值 |
 
-当前正式版：**v1.2.0**（2026-11-15）。最低版本保持1.1.8。解压后运行 `CodeysLauncher.exe`；两种压缩包均不含 docs 文件夹。
+当前正式版：**v1.2.0**（2026-11-15）。最低版本为 **1.2.0**，低于该版本须强制更新。已安装较早 1.2.0 包的用户请重新下载替换启动器，以获得训练选图封面修复。解压后运行 `CodeysLauncher.exe`；两种压缩包均不含 docs 文件夹。
 
 ### 1.2.0 更新
 
@@ -96,7 +96,7 @@ CODEYS 是一个由玩家发起、玩家运营的**无限法则（Ring of Elysiu
 
 CODEYS is a player-run community server for **Ring of Elysium**. Grab the launcher from [Releases](../../releases/latest), register at [codeys.vip](https://codeys.vip), and point the launcher at your own **ROE 2022 client (`0.2.989.0`)** — then jump back into the island and the snow with tactical AI, squads, vehicles and free cosmetics. The launcher is bilingual (Chinese/English), updates itself, and contains **no game files**. Full guide: [PLAYER-GUIDE.en-US.txt](PLAYER-GUIDE.en-US.txt).
 
-**Current stable: v1.1.9 (2026-11-13). The minimum remains 1.1.8.** Adds authenticated lobby stream recovery, delivery acknowledgements, heartbeat detection and bounded retries. Server fixes protect reconnect coordinates and improve packet-loss recovery. Real WAN and in-game UI acceptance are tracked separately. Choose Lite (.NET 10 Desktop Runtime x64 required) or Full (runtime included). Compatibility mode uses a signed ACE-BASE driver, automatically stops and checks the service before each compatible launch, and restores its path on exit. This mode defaults off and requires administrator approval. Updates offer Default/Lite/Full; logs and related crash records retain the latest ten launches. Includes security diagnostics and trusted administrator comment labels. Packages omit the docs folder.
+**Current stable: v1.2.0 (2026-11-15). Minimum required: 1.2.0. Older versions must update.** If you installed an earlier 1.2.0 package, download it again and replace the launcher to receive the training map cover fix. Adds authenticated lobby stream recovery, delivery acknowledgements, heartbeat detection and bounded retries. Server fixes protect reconnect coordinates and improve packet-loss recovery. Real WAN and in-game UI acceptance are tracked separately. Choose Lite (.NET 10 Desktop Runtime x64 required) or Full (runtime included). Compatibility mode uses a signed ACE-BASE driver, automatically stops and checks the service before each compatible launch, and restores its path on exit. This mode defaults off and requires administrator approval. Updates offer Default/Lite/Full; logs and related crash records retain the latest ten launches. Includes security diagnostics and trusted administrator comment labels. Packages omit the docs folder.
 
 ## ⚠️ 声明
 

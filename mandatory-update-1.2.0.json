@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "version": "1.2.0",
+  "minimum_version": "1.2.0",
+  "previous_minimum_version": "1.1.8",
+  "activated_at": "2026-11-15T04:44:00.607019+00:00",
+  "mandatory_for_versions_below": "1.2.0",
+  "same_version_older_packages": "Download again and replace manually; both packages report 1.2.0.",
+  "release_id": 445785893,
+  "tag_unchanged": "c659ea12c1fa183452ab6c38958f880dfcb6ad9f",
+  "release_assets_unchanged": true,
+  "full_sha256": "8f282b25cd09b4009289b5a59c271aff1d4539d98478aa9b98c1b921279a9674",
+  "lite_sha256": "f7d6b95b415ef0675e95ec97593ee225c70c5bdfad61d8190a9ba3b949256305"
+}
