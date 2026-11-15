@@ -2,7 +2,8 @@ CODEYS Ring of Elysium Launcher
 
 Windows 10 / 11, 64-bit. Extract the package and run CodeysLauncher.exe.
 The Full edition includes the runtime. The Lite edition needs .NET 10 Windows Desktop Runtime (x64).
-The current version is 1.1.9. The minimum stays at 1.1.8. Updating is recommended for the new network recovery features.
+The current version is 1.2.0. The minimum stays at 1.1.8.
+Update notes: Attempted fixes for bugs including black screens and falling through the map.
 Keep the launcher open while playing; closing it closes the game started by this launcher.
 
 The root contains CodeysLauncher.exe and the CodeysLauncher.Data folder.
@@ -113,13 +114,12 @@ Toggle Enable lobby map selection independently. When enabled, choose island, sn
 Defaults are automatic renderer selection with lobby map selection enabled. Version 1.1.8 includes these settings.
 
 Game security initialization failure (TP / ACE)
-For Warning (13, 131096, 60), open Settings → Check game security components on the affected computer. This checks five original components for the selected renderer, launch permissions and recent system blocking records.
-For missing files or differences from the recommended client, obtain and fully extract the complete client again. With standard permissions, exit the game and use Reopen as administrator to compare. Windows requests authorization; cancelling leaves the current launcher open.
-If files match but the error persists, use Open installed apps, find Anti-Cheat Expert and follow its official maintenance process. If no entry is available or the problem persists, copy the results and send them with the complete error screenshot to the administrator.
-Matching files or opening maintenance does not confirm recovery. Start the game again to verify the result.
+For Warning (13, 131096, 60), try Compatibility mode below Play on the main screen. Hover over it for an explanation.
+For missing files or differences from the recommended client, obtain and fully extract the complete client again. If original components are present but the error persists, follow Anti-Cheat Expert's official maintenance process and send the complete error screenshot and current launch log to the administrator.
+After enabling compatibility mode or performing maintenance, restart the game to verify the result.
 
-Security component compatibility mode (1.1.8)
-The toggle defaults off. It uses the supplied, signed ACE-BASE driver compatibility plan.
+Compatibility mode (main screen)
+The toggle defaults off and sits below the left edge of Play. It uses the supplied, signed ACE-BASE driver compatibility plan.
 The legacy stand-in DLL is no longer deployed; original client security initialization and checks remain active.
 Windows requests administrator approval. An elevated child owns this game, its connection and the driver transaction.
 Close Ring of Elysium and other ACE games first. Keep the launcher open while playing.
@@ -129,6 +129,8 @@ waiting up to 10 seconds. A stop failure or timeout aborts this launch with a me
 Only after confirming Stopped is the existing demand-start ACE-BASE service path switched.
 Shared system drivers are not replaced. On game exit, startup failure or closing the launcher, the owned
 game and connection stop first; then the compatibility driver is stopped and the exact original path is restored.
+Related security components are allowed to stop naturally; ACE-GAME receives no active stop request. The 90-second countdown is an estimate, and waiting ends as soon as actual cleanup finishes.
+If you reopen and start immediately after closing, the launcher waits for the previous session to release the folder, then continues automatically.
 Recovery succeeds only after both the original path and stopped state are confirmed. If unloading fails,
 another program changes the configuration, or the recovery record cannot be verified, the record is retained.
 Restart Windows as prompted and try again. Do not manually delete lease.json. Unknown configuration is not overwritten.
@@ -136,7 +138,7 @@ Legacy backups are still recovered after verification. A legacy stand-in without
 The result is written to this launch's log and follows the latest-ten-launch retention rule.
 The protected machine directory holds only the latest result and any required recovery record.
 
-Local 1.1.9 preview: legacy ACE recovery records
+Legacy ACE recovery records
 For a known r10 lease.json, the launcher verifies that ACE-BASE has stopped and its path matches the recorded original path. It then archives the exact old record and continues startup. Backups stay in the original ProgramData folder and start with lease.legacy-backup-. In-use services, differing paths or unrecognized records are kept and reported for further handling.
 
 The third choice selects the ordinary desert map, separately from desert training. Map labels follow the launcher language.
