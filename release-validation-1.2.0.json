@@ -1,0 +1,37 @@
+{
+  "version": "1.2.0",
+  "published": true,
+  "announcement": "尝试修复黑屏/坠入地图等bug。",
+  "release_url": "https://github.com/codey-vip/codeys-launcher-release/releases/tag/v1.2.0",
+  "published_at": "2026-11-15T03:34:16Z",
+  "minimum_version": "1.1.8",
+  "required_update": false,
+  "update_notes_panel_available_from": "1.2.0",
+  "update_notes_ui_limitation": "The update announcement panel is available starting with 1.2.0. Older installed executables cannot display the new panel; the announcement is already available in the live update API and release notes.",
+  "packages": [
+    {
+      "edition": "full",
+      "filename": "CodeysLauncher-1.2.0-win-x64.zip",
+      "bytes": 44443952,
+      "sha256": "bdc67feabd9a0f69c460bfcea2cf914f15e25e703ce5a6edad8477b8f1cd512d",
+      "executable_sha256": "41e2c9a5c6024ee647fc885fd31332dfb201f31697d0b8a5603a5e03e43fc5c6",
+      "docs_omitted": true
+    },
+    {
+      "edition": "lite",
+      "filename": "CodeysLauncher-1.2.0-win-x64-lite.zip",
+      "bytes": 2213682,
+      "sha256": "0fdf8d1dc9f2e6f30035ad143f0121a864357193cf8820ddaa050e73a381f203",
+      "executable_sha256": "463b93cab5c880c6c990750b1430b26fb717ef5f6b5d94aa5d0758135e5fc351",
+      "docs_omitted": true
+    }
+  ],
+  "validation": {
+    "functional_checks": 502,
+    "artifact_checks": 120,
+    "public_anonymous_download_checks": 17,
+    "website_anonymous_download_checks": 27,
+    "full_download_sha256_zip_crc_and_range_resume": true,
+    "real_gameplay_acceptance": "pending"
+  }
+}
